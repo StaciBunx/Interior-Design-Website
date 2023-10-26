@@ -7,8 +7,10 @@
         justify-content: center;
         align-items: flex-end;
         margin-bottom: 200px;
+        position: relative;
 
         &_content {
+            position: absolute;
             width: 503px;
             height: 178px;
             border-radius: 37px 37px 0px 0px;
@@ -19,4 +21,116 @@
         }
     }
 
+    &__latest {
+
+        &_box {
+            display: flex;
+            padding: 22px;
+            width: 1200px;
+            height: 522px;
+            border-radius: 62px;
+            border: 1px solid #E7E7E7;
+            box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+            gap: 65px;
+            margin-bottom: 150px;
+        }
+
+        &_box:hover {
+            background-color: #F4F0EC;
+            border-color: #F4F0EC;
+        }
+
+        &_box:hover circle {
+            fill: white;
+        }
+
+        &_img {
+            height: 478px;
+            border-radius: 50px;
+            background: #C4C4C4;
+        }
+
+        &_heading {
+            font-family: 'DM Serif Display', serif;
+            font-style: normal;
+            color: $black;
+            font-weight: 400;
+            font-size: 50px;
+            line-height: 125%;
+            letter-spacing: 1px;
+            margin-bottom: 27px;
+        }
+
+        &_content {
+            display: grid;
+            align-content: center;
+        }
+
+        &_subheading {
+
+            color: $black;
+            font-family: DM Serif Display;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+            letter-spacing: 0.5px;
+            margin-bottom: 22px;
+
+        }
+
+        &_text {
+            margin-bottom: 50px;
+        }
+
+        &_bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &_date {
+            color: $gray;
+            font-family: Jost;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.16px;
+            text-transform: capitalize;
+        }
+
+
+    }
+
+    &__pages {
+
+        &_list {
+            display: flex;
+            justify-content: center;
+            padding-top: 51px;
+            gap: 20px
+        }
+
+        &_link {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            width: 52px;
+            height: 52px;
+            border: 1px solid #CDA274;
+            color: $black;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 150%;
+        }
+
+        &_link:hover {
+            border: none;
+            background-color: #F4F0EC;
+            color: inherit;
+            ;
+        }
+    }
 }
