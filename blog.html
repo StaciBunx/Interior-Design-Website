@@ -7,7 +7,7 @@
     <title>Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
 </head>
@@ -27,168 +27,78 @@
     <main>
 
         <section class="blog__top">
-            <img src="" alt="blog top-banner" style="min-height:356px">
+            <img src="./images/blog/blog-top-banner.jpg" alt="blog top-banner" style="min-height:356px">
             <div class="blog__top_content">
                 <h1 class="heading">Articles & News</h1>
                 <p class="text">Home / Blog</p>
             </div>
         </section>
 
-        <section class="blog__latest">
-            <h2 class="heading ">Latest Post</h2>
+        <section class="blog__latest center">
+            <h2 class="blog__latest_heading ">Latest Post</h2>
             <div class="blog__latest_box">
-                <img src="" alt="latest image" class="blog__latest_img">
+                <img src="./images/blog/blog-latest-post.jpg" alt="latest image" class="blog__latest_img"
+                    style="min-width: 569px; min-height:478px;">
                 <div class="blog__latest_content">
-                    <h3 class="blog__latest_heading heading">Low Cost Latest Invented Interior Designing Ideas</h3>
+                    <h3 class="blog__latest_subheading">Low Cost Latest Invented Interior<br> Designing Ideas</h3>
                     <p class="blog__latest_text text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis
                         dignissim maximus.posuere in.Contrary to popular belief.
+                        <br><br>
+                        Lorem Ipsum is not simply random text. It has roots in a piece of classica.
+                    </p>
+                    <div class="blog__latest_bottom">
+                        <p class="blog__latest_date">26 December, 2022 </p>
+                        <a href="#" class="blog__latest_more">
+                            <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="26" cy="26.5" r="26" fill="#F4F0EC" />
+                                <path d="M23.771 33.1855L29.7139 26.4998L23.771 19.8141" stroke="#292F36"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
 
-                        Lorem Ipsum is not simply random text. It has roots in a piece of classica.</p>
-                    <p class="blog__latest_date text">26 December, 2022 </p>
-                    <a href="#" class="blog__latest_link"><svg width="52" height="53" viewBox="0 0 52 53" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="26" cy="26.5" r="26" fill="#F4F0EC" />
-                            <path d="M23.771 33.1855L29.7139 26.4998L23.771 19.8141" stroke="#292F36" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
                 </div>
             </div>
 
         </section>
 
         <section class="blog center">
-            <h2 class="heading">Articles & News</h2>
-            <div class="blog__box">
-
-                <div class="blog__item">
-                    <img src="./images/index/blog-1.jpg" alt="blog image" class="blog__img"
-                        style="min-width: 340px; min-height:289px;">
-                    <h4 class="blog__tag">Kitchen Design</h4>
-                    <h3 class="blog__heading heading">Let’s Get Solution For Building Construction Work</h3>
-                    <div class="blog__content">
-                        <time datetime="2022-12-26" class="blog__date">26 December, 2022</time>
-                        <a href="#" class="blog__more">
-                            <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                                <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
+            <h2 class="blog__latest_heading">Articles & News</h2>
+            <div id="app" class="blog__box">
+                <div v-for="(item, index) in articles" :key="index">
+                    <div class="blog__item">
+                        <img :src="item.src" alt="blog image" class="blog__img"
+                            style="min-width: 340px; min-height:289px;">
+                        <h4 class="blog__tag">{{item.tag}}</h4>
+                        <h3 class="blog__heading heading">{{item.heading}}</h3>
+                        <div class="blog__content">
+                            <time datetime="2022-12-26" class="blog__date">{{item.date}}</time>
+                            <a href="#" class="blog__more">
+                                <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
+                                    <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-
-                </div>
-
-                <div class="blog__item">
-                    <img src="./images/index/blog-2.jpg" alt="blog image" class="blog__img"
-                        style="min-width: 340px; min-height:289px;">
-                    <h4 class="blog__tag">Living Design</h4>
-                    <h3 class="blog__heading heading">Let’s Get Solution For Building Construction Work</h3>
-                    <div class="blog__content">
-                        <time datetime="2022-12-26" class="blog__date">22 December, 2022</time>
-                        <a href="#" class="blog__more">
-                            <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                                <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="blog__item">
-                    <img src="./images/index/blog-3.jpg" alt="blog image" class="blog__img"
-                        style="min-width: 340px; min-height:289px;">
-                    <h4 class="blog__tag">Interior Design</h4>
-                    <h3 class="blog__heading heading">Let’s Get Solution For Building Construction Work</h3>
-                    <div class="blog__content">
-                        <time datetime="2022-12-26" class="blog__date">25 December, 2022</time>
-                        <a href="#" class="blog__more">
-                            <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                                <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="blog__item">
-                    <img src="./images/index/blog-1.jpg" alt="blog image" class="blog__img"
-                        style="min-width: 340px; min-height:289px;">
-                    <h4 class="blog__tag">Kitchen Design</h4>
-                    <h3 class="blog__heading heading">Let’s Get Solution For Building Construction Work</h3>
-                    <div class="blog__content">
-                        <time datetime="2022-12-26" class="blog__date">26 December, 2022</time>
-                        <a href="#" class="blog__more">
-                            <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                                <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="blog__item">
-                    <img src="./images/index/blog-2.jpg" alt="blog image" class="blog__img"
-                        style="min-width: 340px; min-height:289px;">
-                    <h4 class="blog__tag">Living Design</h4>
-                    <h3 class="blog__heading heading">Let’s Get Solution For Building Construction Work</h3>
-                    <div class="blog__content">
-                        <time datetime="2022-12-26" class="blog__date">22 December, 2022</time>
-                        <a href="#" class="blog__more">
-                            <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                                <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="blog__item">
-                    <img src="./images/index/blog-3.jpg" alt="blog image" class="blog__img"
-                        style="min-width: 340px; min-height:289px;">
-                    <h4 class="blog__tag">Interior Design</h4>
-                    <h3 class="blog__heading heading">Let’s Get Solution For Building Construction Work</h3>
-                    <div class="blog__content">
-                        <time datetime="2022-12-26" class="blog__date">25 December, 2022</time>
-                        <a href="#" class="blog__more">
-                            <svg width="52" height="53" viewBox="0 0 52 53" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
-                                <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-
                 </div>
             </div>
 
             <ul class="blog__pages_list">
                 <li class="blog__pages_item"><a href="#" class="blog__pages_link">
-                        1
+                        01
                     </a></li>
                 <li class="blog__pages_item"><a href="#" class="blog__pages_link">
-                        2
+                        02
                     </a></li>
                 <li class="blog__pages_item"><a href="#" class="blog__pages_link">
-                        3
+                        03
                     </a></li>
                 <li class="blog__pages_item"><a href="#" class="blog__pages_link">
                         <svg width="53" height="52" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
                             <path d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
@@ -249,6 +159,8 @@
         </div>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
