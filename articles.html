@@ -37,14 +37,17 @@
 
                 <aside class="tags">
                     <h2 class="tags__heading">Tags</h2>
+
                     <ul class="tags__list">
-                        <li class="tags__item"
-                            :class="{tags__item_disabled: isDisabledTag, tags__item_active: !isDisabledTag}"
-                            v-for="(tag, index) in tags" :key="index" @click="setTag(tag)">
-                            {{tag}}
+                        <li class="tags__item" v-for="(tag, index) in tags"
+                            :class="{tags__item_active : tag.isActive, tags__item_disabled: !tag.isActive}" :key="index"
+                            @click="setTag(tag.name), changeTagStatus(tag)">
+                            {{tag.name}}
                         </li>
                     </ul>
+
                 </aside>
+
             </section>
         </div>
     </main>
