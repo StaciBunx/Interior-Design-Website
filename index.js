@@ -1,6 +1,9 @@
 new Vue({
     el: "#app",
     data: {
+        currentTag: '',
+        isDisabledTag: true,
+        tags: ['Kitchen', 'Bedroom', 'Building', 'Architecture', 'Kitchen Planning'],
         articles: [
             {
                 src: "./images/index/blog-1.jpg",
@@ -39,6 +42,11 @@ new Vue({
                 date: "25 December, 2022",
             },
         ]
-    }
+    },
+    methods: {
+        setTag(tag) {
+            this.currentTag = tag;
+        }
+    },
 
 })

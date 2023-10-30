@@ -197,13 +197,20 @@
 .tags__item {
   display: inline-block;
   height: 41px;
-  background-color: #F4F0EC;
   padding: 9px 30px;
   border-radius: 10px;
   font-size: 18px;
   cursor: pointer;
 }
 .tags__item:active {
+  background-color: #292F36;
+  color: white;
+}
+.tags__item_disabled {
+  background-color: #F4F0EC;
+  color: black;
+}
+.tags__item_active {
   background-color: #292F36;
   color: white;
 }
