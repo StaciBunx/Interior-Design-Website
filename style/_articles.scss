@@ -22,8 +22,15 @@
     }
 
     &__img {
+        &_big {
+            border-radius: 50px;
+
+        }
+
         &_small {
             margin-bottom: 35px;
+            border-radius: 50px;
+
         }
     }
 

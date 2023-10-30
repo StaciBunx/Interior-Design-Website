@@ -15,7 +15,7 @@ Vue.component('article-comp', {
                 {
                     tag: "Bedroom",
                     heading: "Bedroom: Top 25 Design Styles for a Dreamy Bedroom",
-                    imgBig: "./images/articles/articles-big.jpg",
+                    imgBig: "./images/blog/blog-latest-post.jpg",
                     imgSmall: "./images/articles/articles-small.jpg",
                     date: "26 January, 2022",
                     quote: "Design can help to improve our lives in the present. Design thinking can help us chart a path into the future.",
@@ -24,7 +24,7 @@ Vue.component('article-comp', {
                 {
                     tag: "Building",
                     heading: "Building: Types of drawings for building design",
-                    imgBig: "./images/articles/articles-big.jpg",
+                    imgBig: "./images/index/blog-1.jpg",
                     imgSmall: "./images/articles/articles-small.jpg",
                     date: "2 December, 2022",
                     quote: "Good design is good business.",

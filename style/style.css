@@ -126,8 +126,12 @@
   letter-spacing: 1px;
   margin-bottom: 11px;
 }
+.article__img_big {
+  border-radius: 50px;
+}
 .article__img_small {
   margin-bottom: 35px;
+  border-radius: 50px;
 }
 .article__info {
   padding: 48px 0;
