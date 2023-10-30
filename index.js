@@ -1,6 +1,30 @@
 new Vue({
     el: "#app",
     data: {
+        currentTag: '',
+        tags: [
+            {
+                name: 'Kitchen',
+                isActive: false
+            },
+            {
+                name: 'Bedroom',
+                isActive: false
+            },
+            {
+                name: 'Building',
+                isActive: false
+            },
+            {
+                name: 'Architecture',
+                isActive: false
+            },
+            {
+                name: 'Kitchen Planning',
+                isActive: false
+            },
+        ],
+
         articles: [
             {
                 src: "./images/index/blog-1.jpg",
@@ -39,6 +63,22 @@ new Vue({
                 date: "25 December, 2022",
             },
         ]
-    }
+    },
+
+    methods: {
+        setTag(tag) {
+            this.currentTag = tag;
+        },
+
+        changeTagStatus(tag) {
+            this.tags.forEach(element => {
+                element.isActive = false;
+
+                if (element.name === tag.name) {
+                    element.isActive = !element.isActive;
+                }
+            });
+        }
+    },
 
 })

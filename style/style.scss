@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'blog';
+@import 'articles';
 
 * {
     margin: 0;
@@ -24,7 +25,7 @@ a {
 }
 
 a:hover {
-   color: #CDA274;
+    color: #CDA274;
 }
 
 img {
@@ -245,7 +246,7 @@ ul {
 
     &__item:hover {
         background-color: #F4F0EC;
-        border-color:  #F4F0EC;
+        border-color: #F4F0EC;
     }
 
     &__item:hover circle {
